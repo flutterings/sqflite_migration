@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/flutterings/sqflite_migration.svg?branch=master)](https://travis-ci.org/flutterings/sqflite_migration)
+[![codecov](https://codecov.io/gh/flutterings/sqflite_migration/branch/master/graph/badge.svg)](https://codecov.io/gh/flutterings/sqflite_migration)
+
 # Migrate your mobile sqlite database
 
 Library to manage sqlite db migrations using [sqflite](https://pub.dartlang.org/packages/sqflite) plugin.
