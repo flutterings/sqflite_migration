@@ -1,0 +1,20 @@
+name: sqflite_migration
+description: Library to manage sqlite db migrations.
+version: 0.0.1-dev
+author:
+homepage:
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^4.0.0
+
+flutter:
