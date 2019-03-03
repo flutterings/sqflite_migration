@@ -1,6 +1,6 @@
 name: sqflite_migration
 description: Library to manage sqlite db migrations.
-version: 0.0.1-dev
+version: 0.0.1
 author: Efthymios Sarmpanis <e.sarbanis@gmail.com>
 homepage: https://github.com/flutterings/sqflite_migration
 
