@@ -1,3 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+# Change Log for sqflite_migration
+Library to manage sqlite db migrations.
 
-* TODO: Describe initial release.
+
+This CHANGELOG.md was generated with [**Changelog for Dart**](https://pub.dartlang.org/packages/changelog)
