@@ -1,6 +1,12 @@
-import 'package:sqflite/sqlite_api.dart';
+import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_migration/src/migration_config.dart';
 
+///
+/// An internal class which contains methods to execute the initial and
+/// migration scripts.
+///
+/// [config] (required) the migration configuration to execute.
+///
 class Migrator {
   final MigrationConfig config;
 
