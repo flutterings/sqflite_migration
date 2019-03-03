@@ -16,7 +16,6 @@ void main() {
         openDatabase: (
           path, {
           int version,
-          OnDatabaseConfigureFn onConfigure,
           OnDatabaseCreateFn onCreate,
           OnDatabaseVersionChangeFn onUpgrade,
         }) =>
@@ -36,7 +35,6 @@ void main() {
         openDatabase: (
           path, {
           int version,
-          OnDatabaseConfigureFn onConfigure,
           OnDatabaseCreateFn onCreate,
           OnDatabaseVersionChangeFn onUpgrade,
         }) =>
