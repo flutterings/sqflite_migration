@@ -1,6 +1,14 @@
 # Change Log for sqflite_migration
 A library to enable sqlite db migrations, using sqflite plugin.
 
+## [v0.1.0](http://github.com/flutterings/sqflite_migration/compare/v0.0.2...v0.1.0) - 2019-03-19
+
+### Chore
+* fix formatting issue [9038c91](https://github.com/flutterings/sqflite_migration/commit/9038c916ff224ac413972b67a32de2b7ba91a8a6)
+
+### Docs
+* add example [6ce670a](https://github.com/flutterings/sqflite_migration/commit/6ce670a2da4ccc642d76e83dd2b1cee279ca097b)
+
 ## [v0.0.2](http://github.com/flutterings/sqflite_migration/compare/v0.0.1...v0.0.2) - 2019-03-04
 
 ### Chore
