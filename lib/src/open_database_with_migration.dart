@@ -13,8 +13,8 @@ import 'package:sqflite_migration/src/migrator.dart';
 /// [openDatabase] (optional) do not override this. It is used for testing
 /// purposes.
 ///
-Future<Database> openDatabaseWithMigration(
-    String path, MigrationConfig config, {openDatabase = openDatabase}) async {
+Future<Database> openDatabaseWithMigration(String path, MigrationConfig config,
+    {openDatabase = openDatabase}) async {
   final migrator = Migrator(config);
   return await openDatabase(path,
       version: config.migrationScripts.length + 1,
