@@ -1,6 +1,11 @@
 # Change Log for sqflite_migration
 A library to enable sqlite db migrations, using sqflite plugin.
 
+## [v0.1.2](http://github.com/flutterings/sqflite_migration/compare/v0.1.1...v0.1.2) - 2019-08-23
+
+### Test
+* remove deprecated failing tests [dfc249c](https://github.com/flutterings/sqflite_migration/commit/dfc249c48ec5d350561762444dd104778c35a564)
+
 ## [v0.1.1](http://github.com/flutterings/sqflite_migration/compare/v0.1.0...v0.1.1) - 2019-08-23
 
 ### Chore
