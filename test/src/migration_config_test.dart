@@ -20,19 +20,4 @@ void main() {
             'message', equals('The migrationScripts cannot be null.'))));
   });
 
-  test('should throw assertion when initializationScript is empty', () async {
-    expect(
-        () => MigrationConfig(
-            initializationScript: [], migrationScripts: populatedScript),
-        throwsA(TypeMatcher<AssertionError>().having((e) => e.message,
-            'message', contains('The initializationScript cannot be empty.'))));
-  });
-
-  test('should throw assertion when migrationScript is empty', () async {
-    expect(
-        () => MigrationConfig(
-            initializationScript: populatedScript, migrationScripts: []),
-        throwsA(TypeMatcher<AssertionError>().having((e) => e.message,
-            'message', equals('The migrationScripts cannot be empty.'))));
-  });
 }
