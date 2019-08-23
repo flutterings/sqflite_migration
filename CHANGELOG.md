@@ -1,6 +1,14 @@
 # Change Log for sqflite_migration
 A library to enable sqlite db migrations, using sqflite plugin.
 
+## [v0.1.1](http://github.com/flutterings/sqflite_migration/compare/v0.1.0...v0.1.1) - 2019-08-23
+
+### Chore
+* replace deprecated fonts-droid dependency in travis, with fonts-droid-fallback [091605a](https://github.com/flutterings/sqflite_migration/commit/091605a5089d8f3614074cdbb00aacd6258d7c91)
+
+### Bugs
+* allow empty scripts array closes #2 [5d22773](https://github.com/flutterings/sqflite_migration/commit/5d2277350eddfab27e58a042421752c8e80f373a)
+
 ## [v0.1.0](http://github.com/flutterings/sqflite_migration/compare/v0.0.2...v0.1.0) - 2019-03-19
 
 ### Chore
