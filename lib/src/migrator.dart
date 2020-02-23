@@ -24,10 +24,10 @@ class Migrator {
       Database db, int oldVersion, int newVersion) async {
     assert(oldVersion < newVersion,
         'The newVersion($newVersion) should always be greater than the oldVersion($oldVersion).');
-    assert(config.migrationScripts.length >= newVersion,
+    assert(config.migrationScripts.length <= newVersion,
         'New version ($newVersion) requires ${newVersion - config.migrationScripts.length} migrations more than what you have.');
 
-    for (var i = oldVersion - 1; i <= newVersion - 1; i++) {
+    for (var i = oldVersion - 1; i < newVersion - 1; i++) {
       await db.execute(config.migrationScripts[i]);
     }
   }
