@@ -58,7 +58,8 @@ void main() {
       migrationScripts: ['migration script line 1', 'migration script line 2'],
     );
 
-    await Migrator(config).executeInitialization(db, 1);
+    await Migrator(config)
+        .executeInitialization(db, config.migrationScripts.length + 1);
 
     verify(db.execute('init script line 1'));
     verify(db.execute('init script line 2'));
@@ -98,8 +99,7 @@ void main() {
         throwsA(TypeMatcher<AssertionError>().having(
             (e) => e.message,
             'message',
-            equals(
-                'New version (2) requires 2 migrations more than what you have.'))));
+            equals('New version (2) requires exact 2 migrations.'))));
   });
 
   test(
@@ -116,8 +116,7 @@ void main() {
         throwsA(TypeMatcher<AssertionError>().having(
             (e) => e.message,
             'message',
-            equals(
-                'New version (2) requires 2 migrations more than what you have.'))));
+            equals('New version (2) requires exact 2 migrations.'))));
   });
 
   test('should not execute migrations older than the oldVersion', () async {
@@ -131,26 +130,10 @@ void main() {
       ],
     );
 
-    await Migrator(config).executeMigration(db, 2, 3);
+    await Migrator(config)
+        .executeMigration(db, 2, config.migrationScripts.length + 1);
 
     verify(db.execute('migration line 2'));
     verify(db.execute('migration line 3'));
-  });
-
-  test('should not execute migrations newer than the newVersion', () async {
-    var db = MockDatabase();
-    var config = MigrationConfig(
-      initializationScript: [],
-      migrationScripts: [
-        'migration line 1',
-        'migration line 2',
-        'migration line 3',
-      ],
-    );
-
-    await Migrator(config).executeMigration(db, 1, 2);
-
-    verify(db.execute('migration line 1'));
-    verify(db.execute('migration line 2'));
   });
 }
