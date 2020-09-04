@@ -1,6 +1,11 @@
 # Change Log for sqflite_migration
 A library to enable sqlite db migrations, using sqflite plugin.
 
+## [v0.2.0](http://github.com/flutterings/sqflite_migration/compare/v0.1.1...v0.2.0) - 2020-09-04
+
+### Bugs
+* Based on open_database_with_migration.dart new version of database every time will be equal migrations.length + 1. Situation when we'll perform migration to the version lesser than migrations.length + 1 looks impossible, because of the way we determine the current version. In this case assertion should check it in the manner suggested by the current PR. [ad24d00](https://github.com/flutterings/sqflite_migration/commit/ad24d00874189fbf8c73ef4a8b60cceb9f3d1748)
+
 ## [v0.1.2](http://github.com/flutterings/sqflite_migration/compare/v0.1.1...v0.1.2) - 2019-08-23
 
 ### Test
