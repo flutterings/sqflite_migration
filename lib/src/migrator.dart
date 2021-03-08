@@ -15,9 +15,13 @@ class Migrator {
   Migrator(this.config);
 
   Future<void> executeInitialization(Database db, int version) async {
-    config.initializationScript
-        .forEach((script) async => await db.execute(script));
-    config.migrationScripts.forEach((script) async => await db.execute(script));
+    for (String script in config.initializationScript) {
+      await db.execute(script);
+    }
+
+    for (String script in config.migrationScripts) {
+      await db.execute(script);
+    }
   }
 
   Future<void> executeMigration(
