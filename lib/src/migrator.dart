@@ -14,7 +14,7 @@ class Migrator {
 
   Migrator(this.config);
 
-  Future<void> executeInitialization(Database db, int version) async {
+  Future<void> executeInitialization(DatabaseExecutor db, int version) async {
     for (String script in config.initializationScript) {
       await db.execute(script);
     }
@@ -25,7 +25,7 @@ class Migrator {
   }
 
   Future<void> executeMigration(
-      Database db, int oldVersion, int newVersion) async {
+      DatabaseExecutor db, int oldVersion, int newVersion) async {
     assert(oldVersion < newVersion,
         'The newVersion($newVersion) should always be greater than the oldVersion($oldVersion).');
     assert(config.migrationScripts.length == newVersion - 1,
