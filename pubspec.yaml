@@ -5,17 +5,17 @@ author: Efthymios Sarmpanis <e.sarbanis@gmail.com>
 homepage: https://github.com/flutterings/sqflite_migration
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  sqflite: ^1.0.0
+  sqflite: ^2.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mockito: ^4.0.0
-  matcher: ^0.12.3+1
+  mockito: ^5.0.0
+  matcher: ^0.12.10
 
 flutter:
