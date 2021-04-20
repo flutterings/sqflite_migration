@@ -9,9 +9,11 @@
 /// db state. Every item in the list must contain a single sqlite statement.
 /// Must not be empty.
 ///
+///
 class MigrationConfig {
   final List<String> initializationScript;
   final List<String> migrationScripts;
 
-  MigrationConfig({required this.initializationScript, required this.migrationScripts});
+  MigrationConfig(
+      {required this.initializationScript, required this.migrationScripts});
 }
