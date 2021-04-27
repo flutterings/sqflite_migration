@@ -21,11 +21,12 @@ Future<Database> openDatabaseWithMigration(
   onConfigure = onConfigure,
 }) async {
   final migrator = Migrator(config);
+  final configure = onConfigure;
   return await openDatabase(
     path,
     version: config.migrationScripts.length + 1,
     onCreate: migrator.executeInitialization,
     onUpgrade: migrator.executeMigration,
-    onConfigure: onConfigure,
+    onConfigure: configure,
   );
 }
